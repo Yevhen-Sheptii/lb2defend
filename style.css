@@ -1,0 +1,90 @@
+body { 
+    overflow-y: hidden;
+    margin: 0;
+    background-color: #FFDA78;
+    animation: bg-change 10s infinite alternate;;
+}
+.city {
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    z-index: 1000;
+}
+.stars {
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    opacity: 0%;
+    animation: star-anim 20s infinite alternate;;
+}
+.sun {
+    animation: sunset-anim 10s infinite alternate;;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+    box-shadow: 0px 4px 7px 6px rgba(234, 217, 19, 0.72);
+}
+.moon{
+    animation: moon-anim 20s infinite alternate;;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #F6F1D5;
+    position: absolute;
+    right: 70%;
+    box-shadow: 0px 0px 10px 15px rgba(239, 231, 148, 0.72);
+}
+@keyframes moon-anim{
+    0%{
+        transform: translateY(600px);
+    }
+    70%{
+        transform: translateY(200px);
+    }
+    100%{
+        transform: translateY(600px);
+    }
+}
+@keyframes sunset-anim{
+    100%{
+        transform: translateY(600px);
+    }
+}
+@keyframes bg-change{
+    0%{
+        background-color: #FFDA78;
+    }
+    30% {
+        background-color: #FF7F3E;
+    }
+    60%{
+        background-color: #2A629A;
+    }
+    100%{
+        background-color: #003285;
+    }
+}
+@keyframes star-anim{
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 30%;
+    }
+    55%{
+        opacity: 50%;
+    }
+    60%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 30%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
